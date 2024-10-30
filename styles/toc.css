@@ -1,0 +1,124 @@
+
+.toc {
+	background-color: #fafafa;
+	margin: 0;
+	padding: 0;
+	padding: 0.4em;
+	margin-bottom: 1em;
+	border: 1px solid #ddd;
+	width: 21px;
+	height: 18px;
+	cursor: pointer;
+	display: block;
+	box-sizing: content-box;
+}
+.toc p,
+.toc ul {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 0.3em;
+	box-sizing: content-box;
+	line-height: 1.5em;
+}
+.toc ul {
+	margin-left: 0em;
+}
+.toc ul li {
+	margin-left: 1.8em;
+	list-style: none;
+}
+.toc ul ul li {
+	margin-left: 1.3em;
+	list-style: circle;
+}
+.toc a,
+.toc a:visited {
+	color: #555;
+	text-decoration: none;
+}
+.toc a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+.toc .toc-heading {
+	color: #555;
+	background-image: url(../images/logo-navigation.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 20px 20px;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	height: 20px;
+}
+.toc .toc-wrapper {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	box-sizing: content-box;
+}
+.toc .toc-heading span {
+	margin-top: 0px;
+	margin-left: 25px;
+	display: block;
+	position: absolute;
+	box-sizing: content-box;
+	height: 21px;
+}
+
+/* 	TOC Navigation CSS:
+	This is when the toc code is called by display_navs() 
+	and is used to display the contents of the specified WordPress menus */
+	
+.toc.toc-navigation ul li {
+	margin-left: 1em;
+}
+.toc.toc-navigation ul ul li {
+	margin-left: 1.3em;
+}
+.toc.toc-navigation .toc-heading span {
+	margin-left: 0px;
+}
+.toc.toc-navigation .toc-heading {
+	background-position: right;
+}
+
+/* 	If you're going to put the TOC in the header, you might want to specify a 
+	specific position for it and set it to display over other content using
+	an appropriate z-index value. For example:
+
+	header .toc {
+		position: absolute;
+		top: 0em;
+		right: 0.5em; 
+		display: block;
+		z-index: 1;
+	}	
+
+	In addition, you'll probably need to amend the CSS of the element within which
+	the TOC is set to display (the containing element) so that it allows content
+	to be displayed outside of its bounding box by setting overflow to visisble. 
+	So, for example, if the container element is the header, then:
+
+	header {
+		overflow: visible;
+	}
+
+	You may also want the navigation menu to only appear in certain circumstances,
+	for example when the width of the browser is small (I use it in this way to replace
+	other forms of navigation on a site). To do that, you'll need something like this in the
+	main CSS:
+	
+	header .toc {
+		display: none;
+	}
+	
+	And a suitable @media entry:
+	
+	@media (max-width: 767px) {
+		header .toc {
+			display: block;
+		}	
+	}
+}
+
+*/
